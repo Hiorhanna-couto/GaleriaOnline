@@ -16,4 +16,5 @@ public partial class Imagem
 
     [StringLength(500)]
     public string Caminho { get; set; } = null!;
+    public object Arquivo { get; internal set; }
 }
