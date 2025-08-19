@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\GaleiraOnline.WebApi.props" />
+</Project>

@@ -1,0 +1,6 @@
+@GaleiraOnline.WebApi_HostAddress = http://localhost:5182
+
+GET {{GaleiraOnline.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "TLNNRf16Dh3mvPbaAqd3vQ69rwOOzYuWAwPf7wb/W9E=",
+  "Source": "GaleiraOnline.WebApi",
+  "BasePath": "_content/GaleiraOnline.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
