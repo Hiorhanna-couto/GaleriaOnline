@@ -1,9 +1,6 @@
 ﻿using GaleiraOnline.WebApi.DTO;
+using GaleiraOnline.WebApi.Interfaces;
 using GaleiraOnline.WebApi.Models;
-using GaleiraOnline.WebApi.Repositories;
-using GaleriaOnline.WebApi.DTO;
-using GaleriaOnline.WebApi.Models;
-using GaleriaOnline.WebApi.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,18 +10,19 @@ namespace GaleriaOnline.WebApi.Controllers
     [ApiController]
     public class ImagemController : ControllerBase
     {
-        private readonly ImagemRepository _repository;
-        private readonly IWebHostEnvironment _envi;
+        private readonly IImagemRepository _repository;
+        private readonly IWebHostEnvironment _env;
 
-        public ImagemController(ImagemRepository repository, IWebHostEnvironment envi)
+        public ImagemController(IImagemRepository repository, IWebHostEnvironment env)
         {
             _repository = repository;
-            _envi = envi;
+            _env = env;
         }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetImagemPorID(int id)
         {
-            var imagem = await _repository.GetByIdAsync(id);
+            var imagem = await _repository.GetByidAsync(id);
             if (imagem == null)
             {
                 return NotFound();
@@ -32,13 +30,15 @@ namespace GaleriaOnline.WebApi.Controllers
 
             return Ok(imagem);
         }
+
         [HttpGet]
         public async Task<IActionResult> GetTodasAsImagens()
         {
-            var images = await _repository.GetAllAsync();
-            return Ok(images);
+            var imagens = await _repository.GetAllAsync();
+            return Ok(imagens);
         }
-        [HttpPost("Upload")]
+
+        [HttpPost("upload")]
         public async Task<IActionResult> UploadImagem([FromForm] ImagemDto dto)
         {
             if (dto.Arquivo == null || dto.Arquivo.Length == 0 || String.IsNullOrWhiteSpace(dto.Nome))
@@ -48,20 +48,22 @@ namespace GaleriaOnline.WebApi.Controllers
 
             var extensao = Path.GetExtension(dto.Arquivo.FileName);
             var nomeArquivo = $"{Guid.NewGuid()}{extensao}";
+
             var pastaRelativa = "wwwroot/imagens";
             var caminhoPasta = Path.Combine(Directory.GetCurrentDirectory(), pastaRelativa);
 
             if (!Directory.Exists(caminhoPasta))
             {
                 Directory.CreateDirectory(caminhoPasta);
-
             }
+
             var caminhoCompleto = Path.Combine(caminhoPasta, nomeArquivo);
 
             using (var stream = new FileStream(caminhoCompleto, FileMode.Create))
             {
                 await dto.Arquivo.CopyToAsync(stream);
             }
+
             var imagem = new Imagem
             {
                 Nome = dto.Nome,
@@ -69,71 +71,78 @@ namespace GaleriaOnline.WebApi.Controllers
             };
 
             await _repository.CreateAsync(imagem);
+
             return CreatedAtAction(nameof(GetImagemPorID), new { id = imagem.Id }, imagem);
         }
+
         [HttpPut("{id}")]
-        public async Task<IActionResult> AtualizarImagem(int id, PutImagemDto ImagemAtualizada)
+        public async Task<IActionResult> AtualizarImagem(int id, PutImagemDto imagemAtualizada)
         {
-            var imagem = await _repository.GetByIdAsync(id);
+            var imagem = await _repository.GetByidAsync(id);
             if (imagem == null)
             {
-                return NotFound("Imagem nao encontrada");
+                return NotFound("Imagem não encontrada");
+            }
 
-            }
-            if (ImagemAtualizada.Arquivo == null && string.IsNullOrWhiteSpace(ImagemAtualizada.Nome))
+            if (imagemAtualizada.Arquivo == null && string.IsNullOrWhiteSpace(imagemAtualizada.Nome))
             {
-                return BadRequest();
+                return BadRequest("Pelo menos um dos campos tem que ser preenchido.");
             }
-            if (!string.IsNullOrWhiteSpace(ImagemAtualizada.Nome))
+
+            if (!string.IsNullOrWhiteSpace(imagemAtualizada.Nome))
             {
-                imagem.Nome = ImagemAtualizada.Nome;
+                imagem.Nome = imagemAtualizada.Nome;
             }
 
             var caminhoAntigo = Path.Combine(Directory.GetCurrentDirectory(), imagem.Caminho.Replace("/", Path.DirectorySeparatorChar.ToString()));
 
-            if (ImagemAtualizada.Arquivo != null && ImagemAtualizada.
-                Arquivo.Length > 0)
+            if (imagemAtualizada.Arquivo != null && imagemAtualizada.Arquivo.Length > 0)
             {
+
                 if (System.IO.File.Exists(caminhoAntigo))
                 {
                     System.IO.File.Delete(caminhoAntigo);
                 }
 
-                var extensao = Path.GetExtension(ImagemAtualizada.Arquivo.FileNome);
+                var extensao = Path.GetExtension(imagemAtualizada.Arquivo.FileName);
                 var nomeArquivo = $"{Guid.NewGuid()}{extensao}";
+
                 var pastaRelativa = "wwwroot/imagens";
                 var caminhoPasta = Path.Combine(Directory.GetCurrentDirectory(), pastaRelativa);
 
                 if (!Directory.Exists(caminhoPasta))
                 {
                     Directory.CreateDirectory(caminhoPasta);
-
                 }
                 var caminhoCompleto = Path.Combine(caminhoPasta, nomeArquivo);
 
                 using (var stream = new FileStream(caminhoCompleto, FileMode.Create))
                 {
-                    await ImagemAtualizada.Arquivo.CopyToAsync(stream);
+                    await imagemAtualizada.Arquivo.CopyToAsync(stream);
                 }
+
                 imagem.Caminho = Path.Combine(pastaRelativa, nomeArquivo).Replace("\\", "/");
             }
 
             var atualizado = await _repository.UpdateAsync(imagem);
             if (!atualizado)
             {
-                return StatusCode(500, "Ocorreu um erro ao atualizar a imagem.");
+                return StatusCode(500, "Erro ao atualizar a imagem");
             }
+
             return Ok(imagem);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletarImagem(int id)
         {
-            var imagem = await _repository.GetByIdAsync(id);
+            var imagem = await _repository.GetByidAsync(id);
+
             if (imagem == null)
             {
-                return NotFound("Imagem nao encontrada");
+                return NotFound("imagem não encontrada");
             }
+
             var caminhoFisico = Path.Combine(Directory.GetCurrentDirectory(), imagem.Caminho.Replace("/", Path.DirectorySeparatorChar.ToString()));
 
             if (System.IO.File.Exists(caminhoFisico))
@@ -144,16 +153,17 @@ namespace GaleriaOnline.WebApi.Controllers
                 }
                 catch (Exception ex)
                 {
-                    return StatusCode(500, $"Erro ao excluir o Arquivo: {ex.Message}");
+                    return StatusCode(500, $"Erro ao excluir o arquivo: {ex.Message}");
                 }
-
-                var deletado = await _repository.DeleteAsync(id);
-                if (!deletado)
-                {
-                    return StatusCode(500, "Erro ao excluir imagem do banco");
-                }
-                return NoContent();
             }
+
+            var deletado = await _repository.DeleteAsync(id);
+            if (!deletado)
+            {
+                return StatusCode(500, "Erro ao excluir imagem do banco");
+            }
+
+            return NoContent();
         }
     }
 }

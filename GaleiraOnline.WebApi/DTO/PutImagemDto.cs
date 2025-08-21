@@ -2,7 +2,7 @@
 {
     public class PutImagemDto
     {
-        public object Arquivo { get; internal set; }
+        public IFormFile? Arquivo { get; set; }
         public string? Nome { get; internal set; }
     }
 }

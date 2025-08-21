@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Imagens\\b89aa1ee-e02a-41d0-8bf2-ec61ef47e98c.png"
     },
     {
+      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\e0f07746-47da-4ce0-9bcd-406595b05cf2.png",
+      "PackagePath": "staticwebassets\\Imagens\\e0f07746-47da-4ce0-9bcd-406595b05cf2.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GaleiraOnline.WebApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

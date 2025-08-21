@@ -15,44 +15,36 @@ namespace GaleiraOnline.WebApi.Repositories
         }
         public async Task<IEnumerable<Imagem>> GetAllAsync()
         {
-           return await _context.Imagens.ToListAsync();
+            return await _context.Imagens.ToListAsync();
         }
-
-     
 
         public async Task<Imagem> CreateAsync(Imagem imagem)
         {
-          _context.Imagens.Add(imagem);
+            _context.Imagens.Add(imagem);
             await _context.SaveChangesAsync();
             return imagem;
         }
         public async Task<bool> UpdateAsync(Imagem imagem)
         {
             _context.Imagens.Update(imagem);
-            return await _context.SaveChangesAsync()>0;
+            return await _context.SaveChangesAsync() > 0;
         }
-
         public async Task<bool> DeleteAsync(int id)
         {
-          var imagem = await _context.Imagens.FindAsync(id);
-            if (imagem == null) 
-            { 
-            return true;
-            
+            var imagem = await _context.Imagens.FindAsync(id);
+            if (imagem == null)
+            {
+                return false;
             }
 
             _context.Imagens.Remove(imagem);
             return await _context.SaveChangesAsync() > 0;
         }
 
-        internal async Task GetByIdAsync(int id)
+        public async Task<Imagem?> GetByidAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Imagens.FindAsync(id);
         }
-
-        public Task<Imagem> GetByIdAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }
