@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{28BFDBC0-14E6-4C0B-9B4B-95AB956C2B03}|GaleiraOnline.WebApi.csproj|c:\\users\\52267963825\\desktop\\galeiraonline\\galeiraonline.webapi\\dto\\putimagemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28BFDBC0-14E6-4C0B-9B4B-95AB956C2B03}|GaleiraOnline.WebApi.csproj|solutionrelative:dto\\putimagemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{28BFDBC0-14E6-4C0B-9B4B-95AB956C2B03}|GaleiraOnline.WebApi.csproj|c:\\users\\52267963825\\desktop\\galeiraonline\\galeiraonline.webapi\\dbcontextimagem\\galeriaonlinedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28BFDBC0-14E6-4C0B-9B4B-95AB956C2B03}|GaleiraOnline.WebApi.csproj|solutionrelative:dbcontextimagem\\galeriaonlinedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{28BFDBC0-14E6-4C0B-9B4B-95AB956C2B03}|GaleiraOnline.WebApi.csproj|solutionrelative:controllers\\imagemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28BFDBC0-14E6-4C0B-9B4B-95AB956C2B03}|GaleiraOnline.WebApi.csproj|c:\\users\\52267963825\\desktop\\galeiraonline\\galeiraonline.webapi\\dto\\putimagemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28BFDBC0-14E6-4C0B-9B4B-95AB956C2B03}|GaleiraOnline.WebApi.csproj|solutionrelative:dto\\putimagemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{28BFDBC0-14E6-4C0B-9B4B-95AB956C2B03}|GaleiraOnline.WebApi.csproj|c:\\users\\52267963825\\desktop\\galeiraonline\\galeiraonline.webapi\\dto\\imagemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28BFDBC0-14E6-4C0B-9B4B-95AB956C2B03}|GaleiraOnline.WebApi.csproj|solutionrelative:dto\\imagemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -46,17 +46,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "PutImagemDto.cs",
               "DocumentMoniker": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\DTO\\PutImagemDto.cs",
               "RelativeDocumentMoniker": "DTO\\PutImagemDto.cs",
               "ToolTip": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\DTO\\PutImagemDto.cs",
               "RelativeToolTip": "DTO\\PutImagemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T19:00:59.189Z",
               "IsPinned": true,
@@ -80,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ImagemController.cs",
               "DocumentMoniker": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\Controllers\\ImagemController.cs",
               "RelativeDocumentMoniker": "Controllers\\ImagemController.cs",
@@ -92,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -104,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -116,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ImagemRepository.cs",
               "DocumentMoniker": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\Repositories\\ImagemRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ImagemRepository.cs",
@@ -128,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IImagemRepository.cs",
               "DocumentMoniker": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\Interfaces\\IImagemRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\IImagemRepository.cs",
@@ -140,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Imagem.cs",
               "DocumentMoniker": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\Models\\Imagem.cs",
               "RelativeDocumentMoniker": "Models\\Imagem.cs",
@@ -152,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GaleriaOnlineDbContext.cs",
               "DocumentMoniker": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\DbContextImagem\\GaleriaOnlineDbContext.cs",
               "RelativeDocumentMoniker": "DbContextImagem\\GaleriaOnlineDbContext.cs",

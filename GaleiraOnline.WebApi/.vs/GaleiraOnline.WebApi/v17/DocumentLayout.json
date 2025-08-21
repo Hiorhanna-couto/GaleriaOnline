@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "DTO\\PutImagemDto.cs",
               "ToolTip": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\DTO\\PutImagemDto.cs",
               "RelativeToolTip": "DTO\\PutImagemDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T19:00:59.189Z",
               "IsPinned": true,
@@ -160,8 +160,7 @@
               "RelativeToolTip": "DbContextImagem\\GaleriaOnlineDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T13:06:43.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T13:06:43.478Z"
             }
           ]
         }
