@@ -1,16 +1,28 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\5d972065-5cc5-4479-9746-1cbf4a7b9f67.png",
-      "PackagePath": "staticwebassets\\Imagens\\5d972065-5cc5-4479-9746-1cbf4a7b9f67.png"
+      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\265790fa-3d32-4df8-ab4b-bb27dc31e433.png",
+      "PackagePath": "staticwebassets\\Imagens\\265790fa-3d32-4df8-ab4b-bb27dc31e433.png"
     },
     {
-      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\b89aa1ee-e02a-41d0-8bf2-ec61ef47e98c.png",
-      "PackagePath": "staticwebassets\\Imagens\\b89aa1ee-e02a-41d0-8bf2-ec61ef47e98c.png"
+      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\b780b1b8-9c21-4951-a76c-1cf9b8caf385.png",
+      "PackagePath": "staticwebassets\\Imagens\\b780b1b8-9c21-4951-a76c-1cf9b8caf385.png"
     },
     {
-      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\e0f07746-47da-4ce0-9bcd-406595b05cf2.png",
-      "PackagePath": "staticwebassets\\Imagens\\e0f07746-47da-4ce0-9bcd-406595b05cf2.png"
+      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\bab33326-f214-4207-9ac5-fae90cbed30e.png",
+      "PackagePath": "staticwebassets\\Imagens\\bab33326-f214-4207-9ac5-fae90cbed30e.png"
+    },
+    {
+      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\cccff4ca-8682-4442-97c2-86a7deeeaf20.png",
+      "PackagePath": "staticwebassets\\Imagens\\cccff4ca-8682-4442-97c2-86a7deeeaf20.png"
+    },
+    {
+      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\d3336451-d157-46fd-b5fc-8f1abb0cedf0.png",
+      "PackagePath": "staticwebassets\\Imagens\\d3336451-d157-46fd-b5fc-8f1abb0cedf0.png"
+    },
+    {
+      "Id": "C:\\Users\\52267963825\\Desktop\\GaleiraOnline\\GaleiraOnline.WebApi\\wwwroot\\Imagens\\f8e90160-9342-4a66-9589-59808946c755.png",
+      "PackagePath": "staticwebassets\\Imagens\\f8e90160-9342-4a66-9589-59808946c755.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GaleiraOnline.WebApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

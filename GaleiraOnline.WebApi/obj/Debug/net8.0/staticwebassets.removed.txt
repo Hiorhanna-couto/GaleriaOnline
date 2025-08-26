@@ -1,3 +1,1 @@
-C:\Users\52267963825\Desktop\GaleiraOnline\GaleiraOnline.WebApi\wwwroot\Imagens\5d972065-5cc5-4479-9746-1cbf4a7b9f67.png
-C:\Users\52267963825\Desktop\GaleiraOnline\GaleiraOnline.WebApi\wwwroot\Imagens\b89aa1ee-e02a-41d0-8bf2-ec61ef47e98c.png
-C:\Users\52267963825\Desktop\GaleiraOnline\GaleiraOnline.WebApi\wwwroot\Imagens\e0f07746-47da-4ce0-9bcd-406595b05cf2.png
+C:\Users\52267963825\Desktop\GaleiraOnline\GaleiraOnline.WebApi\wwwroot\Imagens\f8e90160-9342-4a66-9589-59808946c755.png
